@@ -24,6 +24,9 @@ Bugs fixed:
 * The host wouldn't hear sound
 * The peer wouldn't hear messages from the host
 
+### Know bugs:
+* The host still can't hear messages
+
 ### Future updates:
 * Squash the bugs
 * Improved chat interface
