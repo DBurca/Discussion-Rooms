@@ -1,19 +1,24 @@
 # Discussion Rooms
  A chat made for my friends in construct
 
-## Version 3 Change log
+### Version 3 Change log
 * Discussion Rooms uploaded to GitHUb
 * The host can now kick other users
 * Added an interesting background on the login screen
 
-## Version 3.1 Change log
+### Version 3.1 Change log
 Bugs fixed:
 * Leaving the room after a host left would throw an error
 
-## Known bugs:
-* Trying to kick yourself would accidently kick another user
-* You would only get a chat notification if your are in the window
+### Version 3.2 Change log
+* Added an option to enable/disable audio notifications
+* Room list now refreshes every second
+* If you are disconnected from the room, you automaticly go back to the lobby
+Bugs fixed:
+* Errors with kicking people
+* Chat notifications wouldn't work out of focus
 
-## Future updates:
+### Future updates:
 * Squash the bugs
-* Make the chat interface nicer
+* Improved chat interface
+* A dedicated chat settings page
