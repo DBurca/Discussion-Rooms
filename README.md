@@ -18,7 +18,14 @@ Bugs fixed:
 * Errors with kicking people
 * Chat notifications wouldn't work out of focus
 
+### Version 3.3 Change log
+* Removed the option to enable/disable sound
+Bugs fixed:
+* The host wouldn't hear sound
+* The peer wouldn't hear messages from the host
+
 ### Future updates:
 * Squash the bugs
 * Improved chat interface
 * A dedicated chat settings page
+* Add a seperate sound when sending messages
