@@ -2,7 +2,7 @@
  A chat made for my friends in construct
 
 ### Version 3 Change log
-* Discussion Rooms uploaded to GitHUb
+* Discussion Rooms uploaded to GitHub
 * The host can now kick other users
 * Added an interesting background on the login screen
 
