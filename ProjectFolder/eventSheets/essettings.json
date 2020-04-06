@@ -1,0 +1,281 @@
+{
+	"name": "esSettings",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Notifications",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "0 =  none, 1 = beep, 2 = TTS",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 848319916254365
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 797129862387118
+				}
+			],
+			"actions": [
+				{
+					"id": "set-selection",
+					"objectClass": "Notifications",
+					"sid": 901486398279927,
+					"parameters": {
+						"index": "1"
+					}
+				}
+			],
+			"sid": 881059331671009,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "supports-speech-synthesis",
+							"objectClass": "SpeechSynthesis",
+							"sid": 984820932147770,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "remove",
+							"objectClass": "Notifications",
+							"sid": 703795219580785,
+							"parameters": {
+								"index": "2"
+							}
+						}
+					],
+					"sid": 444913603856175
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Apply",
+					"sid": 616808453320490
+				}
+			],
+			"actions": [],
+			"sid": 214478915557773,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-selected-item-text",
+							"objectClass": "Notifications",
+							"sid": 673933831315618,
+							"parameters": {
+								"text-to-compare": "\"None\"",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 890863391266287,
+							"parameters": {
+								"variable": "Notifications",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 860611235013125
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-selected-item-text",
+							"objectClass": "Notifications",
+							"sid": 503525016074102,
+							"parameters": {
+								"text-to-compare": "\"Beep\"",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 162559511264944,
+							"parameters": {
+								"variable": "Notifications",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 772822590821371
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-selected-item-text",
+							"objectClass": "Notifications",
+							"sid": 931928563191089,
+							"parameters": {
+								"text-to-compare": "\"Text-to-speech\"",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 143543451333878,
+							"parameters": {
+								"variable": "Notifications",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 182205199664696
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "NotifTest",
+					"sid": 805078252417857
+				}
+			],
+			"actions": [],
+			"sid": 863822583499929,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-selected-item-text",
+							"objectClass": "Notifications",
+							"sid": 317964656955398,
+							"parameters": {
+								"text-to-compare": "\"None\"",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 631360387888979
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-selected-item-text",
+							"objectClass": "Notifications",
+							"sid": 770259296839970,
+							"parameters": {
+								"text-to-compare": "\"Beep\"",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 225087142229918,
+							"parameters": {
+								"audio-file": "when",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 860295583356639,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 173344435551101,
+							"parameters": {
+								"audio-file": "me-too",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 676541368119719
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-selected-item-text",
+							"objectClass": "Notifications",
+							"sid": 398712385610627,
+							"parameters": {
+								"text-to-compare": "\"Text-to-speech\"",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "speak-text",
+							"objectClass": "SpeechSynthesis",
+							"sid": 129800768517317,
+							"parameters": {
+								"text": "\"This is how your notifications will sound like\"",
+								"language": "\"\"",
+								"voice-uri": "\"\"",
+								"volume": "0",
+								"rate": "1",
+								"pitch": "1.7"
+							}
+						}
+					],
+					"sid": 633489297401437
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Leave",
+					"sid": 754962318919685
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 396646872886534,
+					"parameters": {
+						"layout": "Login"
+					}
+				}
+			],
+			"sid": 343709756660077
+		}
+	],
+	"sid": 827008954056991
+}
