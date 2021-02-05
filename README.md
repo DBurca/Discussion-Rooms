@@ -4,6 +4,10 @@
 ### Future updates:
 * Chatbot, co-host options, mod options, and ban options.
 
+### Version 5.1 Change log
+Bugs fixed:
+* User list would not update correctly
+
 ### Version 5.0 Change log
 * Revamped login screen
 * Added FAQ and Change log page
