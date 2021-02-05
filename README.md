@@ -1,9 +1,14 @@
 # Discussion Rooms
- A chat made for my friends in construct
+ A chat made for my friends in Construct 3
 
 ### Future updates:
-* Add more settings to the settings page (It only has 1 setting, how embarrassing!)
-* Improve the chat interface
+* Chatbot, co-host options, mod options, and ban options.
+
+### Version 5.0 Change log
+* Revamped login screen
+* Added FAQ and Change log page
+* Added aesthetic improvements to the chatroom interface
+* Added private rooms that don't appear in the active rooms list
 
 ### Version 4.0 Change log
 * Added a dedicated settings page
