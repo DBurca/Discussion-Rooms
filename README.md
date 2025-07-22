@@ -1,8 +1,5 @@
-# Discussion Rooms
- A chat made for my friends in Construct 3
-
-### Future updates:
-* Chatbot, co-host options, mod options, and ban options.
+# DiscussionRooms
+ A lightweight web-based chat application made with Construct 3. This was a project I was working on when I first started programming in middle school - early high school.
 
 ### Version 5.1 Change log
 Bugs fixed:
@@ -41,5 +38,5 @@ Bugs fixed:
 
 ### Version 3 Change log
 * Discussion Rooms uploaded to GitHub
-* The host can now kick other users
-* Added an interesting background on the login screen
+* Host can now kick other users
+* Added a background options on the login screen
